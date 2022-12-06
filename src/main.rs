@@ -13,6 +13,8 @@ fn main() {
    show_lines();
    array();
    show_lines();
+   func();
+   show_lines();
 }
 
 fn show_lines() {
@@ -68,3 +70,11 @@ fn array() {
     println!("{}", nums[1]);
 }
 
+fn add(x: i32, y: i32) -> i32 {
+    return x + y;
+}
+
+fn func() {
+   let total = add(1, 2);
+   println!("{}", total);
+}
