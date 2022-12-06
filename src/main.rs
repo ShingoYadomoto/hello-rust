@@ -17,6 +17,8 @@ fn main() {
    show_lines();
    tuple();
    show_lines();
+   unit();
+   show_lines();
 }
 
 fn show_lines() {
@@ -93,4 +95,23 @@ fn tuple() {
     // タプルを2つの変数に分解
     let (a, b) = swap(result.0, result.1);
     println!("{} {}", a, b);
+}
+
+fn make_nothing() -> () {
+    return ();
+}
+
+// 戻り値は () と推論
+fn make_nothing2() {
+    // この関数は戻り値が指定されないため () を返す
+}
+
+fn unit() {
+    let a = make_nothing();
+    let b = make_nothing2();
+
+    // 空を表示するのは難しいので、
+    // a と b のデバッグ文字列を表示
+    println!("a の値: {:?}", a);
+    println!("b の値: {:?}", b);
 }
