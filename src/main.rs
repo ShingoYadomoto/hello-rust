@@ -15,6 +15,8 @@ fn main() {
    show_lines();
    func();
    show_lines();
+   tuple();
+   show_lines();
 }
 
 fn show_lines() {
@@ -77,4 +79,18 @@ fn add(x: i32, y: i32) -> i32 {
 fn func() {
    let total = add(1, 2);
    println!("{}", total);
+}
+
+fn swap(x: i32, y: i32) -> (i32, i32) {
+    return (y, x);
+}
+
+fn tuple() {
+    // 戻り値をタプルで返す
+    let result = swap(123, 321);
+    println!("{} {}", result.0, result.1);
+
+    // タプルを2つの変数に分解
+    let (a, b) = swap(result.0, result.1);
+    println!("{} {}", a, b);
 }
