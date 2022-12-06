@@ -11,6 +11,8 @@ fn main() {
    show_lines();
    constant();
    show_lines();
+   array();
+   show_lines();
 }
 
 fn show_lines() {
@@ -58,5 +60,11 @@ fn constant() {
         "ゼロからアップル {} を作るには、まず宇宙を創造する必要があります。",
         PI
     );
+}
+
+fn array() {
+    let nums: [i32; 3] = [1, 2, 3];
+    println!("{:?}", nums);
+    println!("{}", nums[1]);
 }
 
