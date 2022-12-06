@@ -9,6 +9,8 @@ fn main() {
    show_lines();
    cast();
    show_lines();
+   constant();
+   show_lines();
 }
 
 fn show_lines() {
@@ -48,3 +50,13 @@ fn cast() {
     let t = true;
     println!("{}", t as u8);
 }
+
+const PI: f32 = 3.14159;
+
+fn constant() {
+    println!(
+        "ゼロからアップル {} を作るには、まず宇宙を創造する必要があります。",
+        PI
+    );
+}
+
